@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0a10" />
+  <meta name="description" content="Uma música que eu queria te deixar." />
+  <title>pra você ♡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <main class="app" id="app">
+    <section class="intro" id="intro" aria-labelledby="introTitle">
+      <div class="intro-card">
+        <span class="eyebrow">uma coisinha que ficou guardada</span>
+        <h1 id="introTitle">eu devia ter te mandado isso antes.</h1>
+        <p>coloca o fone. é só uma música, mas eu queria que você escutasse assim.</p>
+        <button id="startBtn" class="start-btn" type="button">
+          <span>ouvir comigo</span>
+          <span class="heart">♡</span>
+        </button>
+        <small>fica melhor com o som ligado</small>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-hidden="true">
+      <header class="topbar">
+        <div class="brand">guilhrm<span>♡</span></div>
+        <button id="soundBtn" class="icon-btn" type="button" aria-label="Pausar ou continuar música" title="Pausar / continuar">
+          <span id="soundIcon">Ⅱ</span>
+        </button>
+      </header>
+
+      <div class="stage" id="stage">
+        <div class="halo halo-a"></div>
+        <div class="halo halo-b"></div>
+
+        <div class="music-card" id="musicCard">
+          <div class="cover-wrap">
+            <div class="cover" id="cover">
+              <div class="cover-orbit orbit-1"></div>
+              <div class="cover-orbit orbit-2"></div>
+              <div class="cover-center">A</div>
+            </div>
+            <span class="now">tocando agora</span>
+          </div>
+
+          <div class="track-meta">
+            <h2>Aliança</h2>
+            <p>Tribalistas</p>
+          </div>
+        </div>
+
+        <div class="message-wrap" aria-live="polite">
+          <p id="message" class="message">pra você, Stefani ♡</p>
+        </div>
+
+        <canvas id="visualizer" class="visualizer" aria-hidden="true"></canvas>
+
+        <div class="progress-shell" aria-label="Progresso da música">
+          <div class="progress-track"><div id="progress" class="progress"></div></div>
+          <div class="time-row"><span id="currentTime">0:00</span><span id="duration">3:57</span></div>
+        </div>
+      </div>
+
+      <div class="floating-words" id="floatingWords" aria-hidden="true">
+        <span>você</span><span>♡</span><span>aliança</span><span>nós</span><span>sempre</span>
+      </div>
+
+      <section id="finale" class="finale" aria-hidden="true">
+        <div class="finale-inner">
+          <span class="eyebrow">e era só isso</span>
+          <h2>essa música ficou com a sua cara na minha cabeça.</h2>
+          <p>então eu quis deixar ela aqui, do meu jeito.</p>
+          <div class="signature">— guilhrm ♡</div>
+          <button id="replayBtn" class="replay-btn" type="button">ouvir de novo</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <audio id="audio" preload="auto" src="alianca.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
